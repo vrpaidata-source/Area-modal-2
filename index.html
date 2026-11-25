@@ -5,53 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <title>Yenga Area Ulla Varatha...!!</title>
-/* ===== FIT-TO-SCREEN: no scroll, mobile + desktop ===== */
-:root{--u:clamp(8px,min(1.95dvh,3.8vw),17px)} /* ellam indha 1 value-a scale aagum */
-html,body{height:100%;overflow:hidden}
-body{min-height:0;display:flex;flex-direction:column;font-size:var(--u)}
-nav{flex:none;padding:.5em .6em .2em}
-nav a{font-size:1.05em;padding:.2em .1em}
-.hero{flex:1;min-height:0;width:100%;padding:0 12px;gap:.7em;align-content:center;
- grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"copy guards" "card card"}
-.copy{text-align:left;min-width:0}
-.copy h1{font-size:1.75em;margin:.1em 0 0;line-height:1.05}
-.swoosh{height:.5em;width:70%;margin:.2em 0 .7em}
-.badge{padding:.6em 1em .5em;border-width:3px;outline-width:2px;outline-offset:-6px;border-radius:12px}
-.badge b{font-size:1.4em}
-.badge i{font-size:1.05em;margin-top:.3em}
-.feats{justify-content:flex-start;margin-top:.8em}
-.feats div{display:flex;align-items:center;gap:.3em;padding:0 .6em;font-size:.8em}
-.feats div:first-child{padding-left:0}
-.feats svg{display:inline-block;margin:0;width:1.4em;height:1.4em}
-.guards{width:auto;justify-self:end}
-.stage{width:auto;height:calc(var(--u)*13);aspect-ratio:9/16;overflow:visible;border-radius:0}
-.security-video{clip-path:inset(10% round 14px)}
-.bub{left:auto;right:0;translate:none;width:min(78vw,300px)}
-.card{max-width:min(100%,460px);padding:.9em 1em 1em;border-radius:1.8em}
-.tabs{margin-bottom:.6em;padding:.25em;border-radius:1em}
-.tabs button{font-size:1em;padding:.5em}
-h2{font-size:1.3em;margin:.1em 0}
-.hint{font-size:.8em;margin:0 0 .3em;line-height:1.2}
-.f{margin-top:.4em}
-.f input{height:calc(var(--u)*2.5);min-height:0;padding-top:0;padding-bottom:0;font-size:16px}
-.f>svg{left:1em}
-.eye{width:2.3em;height:2.3em;right:.3em}
-.btn{margin-top:.7em;min-height:0;height:calc(var(--u)*2.8);font-size:1.15em}
-.msg{margin:.35em 0 0;min-height:1.1em;font-size:.82em;line-height:1.1}
-.row{margin-top:.3em;font-size:.85em}
-.link{padding:.15em .3em}
-.foot{flex:none;font-size:.65em;padding:0 8px .3em;margin:0}
-
-@media (min-width:900px){
- :root{--u:clamp(9px,min(1.95dvh,1.5vw),19px)}
- .hero{max-width:1280px;margin:0 auto;grid-template-columns:1.1fr 1fr .9fr;grid-template-areas:"guards copy card"}
- .copy{font-size:1.3em}
- .copy h1{font-size:2.2em}
- .guards{justify-self:center}
- .stage{height:calc(var(--u)*34)}
- .bub{left:50%;right:auto;translate:-50% 0;width:min(98vw,320px)}
-}
- <style>
+<style>
 :root{--y:#ffd21f;--navy:#071a4f;--glass:rgba(5,22,84,.78);--line:rgba(110,170,255,.55);--field:rgba(4,18,70,.85);--ink:#fff;--muted:#bcd0ff;--err:#ff8a80;--ok:#7ee2a0;color-scheme:dark;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:inherit}
@@ -102,12 +56,57 @@ h2{margin:6px 0 2px;text-align:center;font-size:1.5rem}
  .feats{justify-content:flex-start;padding-left:6%}
 }
 @media (min-width:600px) and (max-width:899px){.guards{width:min(70%,420px)}}
+/* ===== FIT-TO-SCREEN: no scroll, mobile + desktop ===== */
+:root{--u:clamp(8px,min(1.95dvh,3.8vw),17px)} /* ellam indha 1 value-a scale aagum */
+html,body{height:100%;overflow:hidden}
+body{min-height:0;display:flex;flex-direction:column;font-size:var(--u)}
+nav{flex:none;padding:.5em .6em .2em}
+nav a{font-size:1.05em;padding:.2em .1em}
+.hero{flex:1;min-height:0;width:100%;padding:0 12px;gap:.7em;align-content:center;
+ grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"copy guards" "card card"}
+.copy{text-align:left;min-width:0}
+.copy h1{font-size:1.75em;margin:.1em 0 0;line-height:1.05}
+.swoosh{height:.5em;width:70%;margin:.2em 0 .7em}
+.badge{padding:.6em 1em .5em;border-width:3px;outline-width:2px;outline-offset:-6px;border-radius:12px}
+.badge b{font-size:1.4em}
+.badge i{font-size:1.05em;margin-top:.3em}
+.feats{justify-content:flex-start;margin-top:.8em}
+.feats div{display:flex;align-items:center;gap:.3em;padding:0 .6em;font-size:.8em}
+.feats div:first-child{padding-left:0}
+.feats svg{display:inline-block;margin:0;width:1.4em;height:1.4em}
+.guards{width:auto;justify-self:end}
+.stage{width:auto;height:calc(var(--u)*13);aspect-ratio:9/16;overflow:visible;border-radius:0}
+.security-video{clip-path:inset(10% round 14px)}
+.bub{left:auto;right:0;translate:none;width:min(78vw,300px)}
+.card{max-width:min(100%,460px);padding:.9em 1em 1em;border-radius:1.8em}
+.tabs{margin-bottom:.6em;padding:.25em;border-radius:1em}
+.tabs button{font-size:1em;padding:.5em}
+h2{font-size:1.3em;margin:.1em 0}
+.hint{font-size:.8em;margin:0 0 .3em;line-height:1.2}
+.f{margin-top:.4em}
+.f input{height:calc(var(--u)*2.5);min-height:0;padding-top:0;padding-bottom:0;font-size:16px}
+.f>svg{left:1em}
+.eye{width:2.3em;height:2.3em;right:.3em}
+.btn{margin-top:.7em;min-height:0;height:calc(var(--u)*2.8);font-size:1.15em}
+.msg{margin:.35em 0 0;min-height:1.1em;font-size:.82em;line-height:1.1}
+.row{margin-top:.3em;font-size:.85em}
+.link{padding:.15em .3em}
+.foot{flex:none;font-size:.65em;padding:0 8px .3em;margin:0}
 
+@media (min-width:900px){
+ :root{--u:clamp(9px,min(1.95dvh,1.5vw),19px)}
+ .hero{max-width:1280px;margin:0 auto;grid-template-columns:1.1fr 1fr .9fr;grid-template-areas:"guards copy card"}
+ .copy{font-size:1.3em}
+ .copy h1{font-size:2.2em}
+ .guards{justify-self:center}
+ .stage{height:calc(var(--u)*34)}
+ .bub{left:50%;right:auto;translate:-50% 0;width:min(98vw,320px)}
+}
 /* ===== SECURITY VIDEO SMALL 9:16 BOX ===== */
 .stage{
   position:relative;
   width:min(100%,230px);
-  aspect-ratio:9/16;
+  aspect-ratio:6/6;
   overflow:hidden;
   margin:0 auto;
   border-radius:18px;
