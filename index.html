@@ -102,7 +102,7 @@ h2{font-size:1.3em;margin:.1em 0}
  .stage{height:calc(var(--u)*34)}
  .bub{left:50%;right:auto;translate:-50% 0;width:min(98vw,320px)}
 }
-/* ===== SECURITY VIDEO SMALL 9:16 BOX ===== */
+/* ===== SECURITY VIDEO SMALL 16/9 BOX ===== */
 .stage{
   position:relative;
   width:min(100%,230px);
@@ -204,9 +204,26 @@ body.closed .hero,body.closed nav,body.closed .foot{visibility:hidden}
 #dbg{position:fixed;left:8px;bottom:8px;z-index:60;display:flex;gap:6px;align-items:center;background:rgba(0,0,0,.7);color:#fff;font:700 12px system-ui;padding:6px 8px;border-radius:10px}
 #dbg select{font:inherit;max-width:44vw}
 @media(prefers-reduced-motion:reduce){#night *{animation:none!important;transition:none!important}}
-  
+  /* ===== FIT MODE: wide viewport on touch devices (desktop-site mode) ===== */
+html.fit{--u:15px;background:radial-gradient(ellipse at 15% 30%,#1f6bff 0,transparent 55%),radial-gradient(ellipse at 90% 100%,#1b5cf0 0,transparent 50%),linear-gradient(160deg,#0b45da,#06278f 70%,#041a66)}
+html.fit body{position:fixed;left:0;top:0;transform-origin:0 0;background:none;overflow:hidden}
+html.fit .hero{max-width:none;margin:0;padding:0 3%;gap:2%;align-content:center;
+ grid-template-columns:1.05fr 1fr .9fr;grid-template-areas:"guards copy card"}
+html.fit .copy{font-size:1.3em;text-align:left}
+html.fit .copy h1{font-size:2.2em}
+html.fit .guards{width:100%;justify-self:center}
+html.fit .stage{width:min(100%,calc(var(--u)*26));height:auto;aspect-ratio:7/6;overflow:visible}
+html.fit .bub{top:-4%;left:50%;right:auto;margin:0;translate:-50% 0;width:100%}
 </style>
 </head>
+  <script>
+(function(){var h=document.documentElement,b=document.body,W=1100,H=640;
+function fit(){var vw=innerWidth,vh=innerHeight,q=/[?&]fit=(\d)/.exec(location.search),
+ on=q?q[1]==='1':(matchMedia('(pointer:coarse)').matches&&vw>=700);
+ h.classList.toggle('fit',on);if(!on){b.style.cssText='';return}
+ var s=Math.min(vw/W,vh/H);b.style.cssText='width:'+vw/s+'px;height:'+vh/s+'px;transform:scale('+s+')'}
+fit();addEventListener('resize',fit);addEventListener('orientationchange',fit)})();
+</script>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="home" viewBox="0 0 24 24"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></symbol>
