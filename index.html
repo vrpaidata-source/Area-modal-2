@@ -6,27 +6,6 @@
 <meta name="color-scheme" content="dark">
 <title>Yenga Area Ulla Varatha...!!</title>
 <style>
-  /* ===== WEB BROWSER ONLY (desktop / laptop, mouse) =====
-   Paste at the very end of your <style> block */
-@media (min-width:900px) and (hover:hover) and (pointer:fine){
- :root{--u:clamp(12px,min(1.95dvh,1.1vw),21px)}
- nav{justify-content:center;gap:3.2em;padding:1em 1em .4em}
- nav a{font-size:1.15em}
- .hero{max-width:1600px;width:100%;margin:0 auto;padding:0 4vw;gap:3vw;
-  grid-template-columns:1.15fr 1.1fr .85fr;grid-template-areas:"guards copy card";align-content:center}
- .guards{width:100%;max-width:none;justify-self:center}
- .stage{width:min(100%,calc(var(--u)*38));height:auto;aspect-ratio:7/6;overflow:visible}
- .security-video{object-fit:contain;object-position:center bottom;transform:none;clip-path:none}
- .bub{top:-6%;left:50%;right:auto;margin:0;translate:-50% 0;width:min(100%,360px);font-size:.8rem;line-height:1.25;padding:6px 10px 7px}
- .bub .tag{font-size:.62rem}
- .copy{font-size:1.32em;text-align:left;min-width:0}
- .copy h1{font-size:2.3em}
- .swoosh{width:80%;margin:.2em 0 .8em}
- .feats{justify-content:flex-start;flex-wrap:wrap;row-gap:.5em;margin-top:1em}
- .card{max-width:480px;justify-self:end;padding:1.1em 1.3em 1.2em}
- .f input{height:calc(var(--u)*2.9)}
- .btn{height:calc(var(--u)*3.1)}
-}
 :root{--y:#ffd21f;--navy:#071a4f;--glass:rgba(5,22,84,.78);--line:rgba(110,170,255,.55);--field:rgba(4,18,70,.85);--ink:#fff;--muted:#bcd0ff;--err:#ff8a80;--ok:#7ee2a0;color-scheme:dark;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:inherit}
@@ -76,30 +55,9 @@ h2{margin:6px 0 2px;text-align:center;font-size:1.5rem}
  .guards{width:100%;max-width:560px;justify-self:start}
  .feats{justify-content:flex-start;padding-left:6%}
 }
-  /* ===== WEB BROWSER ONLY (desktop / laptop, mouse) =====
-   Paste at the very end of your <style> block */
-@media (min-width:900px) and (hover:hover) and (pointer:fine){
- :root{--u:clamp(12px,min(1.95dvh,1.1vw),21px)}
- nav{justify-content:center;gap:3.2em;padding:1em 1em .4em}
- nav a{font-size:1.15em}
- .hero{max-width:1600px;width:100%;margin:0 auto;padding:0 4vw;gap:3vw;
-  grid-template-columns:1.15fr 1.1fr .85fr;grid-template-areas:"guards copy card";align-content:center}
- .guards{width:100%;max-width:none;justify-self:center}
- .stage{width:min(100%,calc(var(--u)*38));height:auto;aspect-ratio:7/6;overflow:visible}
- .security-video{object-fit:contain;object-position:center bottom;transform:none;clip-path:none}
- .bub{top:-6%;left:50%;right:auto;margin:0;translate:-50% 0;width:min(100%,360px);font-size:.8rem;line-height:1.25;padding:6px 10px 7px}
- .bub .tag{font-size:.62rem}
- .copy{font-size:1.32em;text-align:left;min-width:0}
- .copy h1{font-size:2.3em}
- .swoosh{width:80%;margin:.2em 0 .8em}
- .feats{justify-content:flex-start;flex-wrap:wrap;row-gap:.5em;margin-top:1em}
- .card{max-width:480px;justify-self:end;padding:1.1em 1.3em 1.2em}
- .f input{height:calc(var(--u)*2.9)}
- .btn{height:calc(var(--u)*3.1)}
-}
 @media (min-width:600px) and (max-width:899px){.guards{width:min(70%,420px)}}
 /* ===== FIT-TO-SCREEN: no scroll, mobile + desktop ===== */
-:root{--u:clamp(8px,min(1.95dvh,3.8vw),17px)} /* ellam indha 1 value-a scale aagum */
+:root{--u:clamp(8px,min(1.95dvh,3.8vw),17px)}
 html,body{height:100%;overflow:hidden}
 body{min-height:0;display:flex;flex-direction:column;font-size:var(--u)}
 nav{flex:none;padding:.5em .6em .2em}
@@ -145,44 +103,13 @@ h2{font-size:1.3em;margin:.1em 0}
  .bub{left:50%;right:auto;translate:-50% 0;width:min(98vw,320px)}
 }
 /* ===== SECURITY VIDEO SMALL 16/9 BOX ===== */
-.stage{
-  position:relative;
-  width:min(100%,230px);
-  aspect-ratio:7/6;
-  overflow:hidden;
-  margin:0 auto;
-  border-radius:18px;
-}
-
-.security-video{
-  display:block;
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:1;
-  object-fit:cover;
-  object-position:center 45%;
-  transform:scale(1.25);
-  background:transparent;
-  filter:drop-shadow(0 12px 18px rgba(0,0,0,.25));
-}
-
-/* Transparent WebM character video replaces old SVG animation */
+.stage{position:relative;width:min(100%,230px);aspect-ratio:7/6;overflow:hidden;margin:0 auto;border-radius:18px}
+.security-video{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:1;object-fit:cover;object-position:center 45%;transform:scale(1.25);background:transparent;filter:drop-shadow(0 12px 18px rgba(0,0,0,.25))}
 .stage>svg{display:none!important}
 .stage svg{display:none;width:100%;height:auto;position:relative;z-index:1;overflow:visible}
-.stage svg{display:none;width:100%;height:auto;position:relative;z-index:1;overflow:visible}
-  /* ===== SPEECH BUBBLE: video pakkathula, overlap illa ===== */
-.bub{
- top:6%;left:auto;right:100%;margin-right:10px;translate:none;
- width:min(60vw,240px);font-size:.8em;
-}
-/* tail pointing to the guards */
-.bub::after{
- content:"";position:absolute;top:1em;right:-7px;width:14px;height:2px;
- background:inherit;border:inherit;border-width:1.5px 1.5px 0 0;rotate:45deg;
-}
-
+/* ===== SPEECH BUBBLE ===== */
+.bub{top:6%;left:auto;right:100%;margin-right:10px;translate:none;width:min(60vw,240px);font-size:.8em}
+.bub::after{content:"";position:absolute;top:1em;right:-7px;width:14px;height:2px;background:inherit;border:inherit;border-width:1.5px 1.5px 0 0;rotate:45deg}
 @media (min-width:900px){
  .bub{right:auto;left:100%;margin:0 0 0 10px;top:8%;width:min(24vw,260px)}
  .bub::after{right:auto;left:-7px;border-width:0 0 1.5px 1.5px}
@@ -213,7 +140,7 @@ h2{font-size:1.3em;margin:.1em 0}
 .pose-cuff .cuffs{animation:cs .5s ease-in-out infinite alternate}@keyframes cs{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
 @media (prefers-reduced-motion:reduce){.stage *{animation:none!important}}
 
-/* ===== NIGHT DUTY SYSTEM (added) ===== */
+/* ===== NIGHT DUTY SYSTEM ===== */
 body.closed .hero,body.closed nav,body.closed .foot{visibility:hidden}
 #night{position:fixed;inset:0;z-index:50;display:none;overflow:hidden;background:rgba(2,5,18,.93);touch-action:manipulation}
 #night.on{display:block}#night.dawn{background:rgba(20,34,90,.62)}
@@ -246,8 +173,7 @@ body.closed .hero,body.closed nav,body.closed .foot{visibility:hidden}
 #dbg{position:fixed;left:8px;bottom:8px;z-index:60;display:flex;gap:6px;align-items:center;background:rgba(0,0,0,.7);color:#fff;font:700 12px system-ui;padding:6px 8px;border-radius:10px}
 #dbg select{font:inherit;max-width:44vw}
 @media(prefers-reduced-motion:reduce){#night *{animation:none!important;transition:none!important}}
-  /* ===== WEB BROWSER ONLY (desktop / laptop, mouse) =====
-   Paste at the very end of your <style> block */
+/* ===== WEB BROWSER ONLY (desktop / laptop, mouse) ===== */
 @media (min-width:900px) and (hover:hover) and (pointer:fine){
  :root{--u:clamp(12px,min(1.95dvh,1.1vw),21px)}
  nav{justify-content:center;gap:3.2em;padding:1em 1em .4em}
@@ -277,7 +203,7 @@ html.fit .copy h1{font-size:2.2em}
 html.fit .guards{width:100%;justify-self:center}
 html.fit .stage{width:min(100%,calc(var(--u)*26));height:auto;aspect-ratio:7/6;overflow:visible}
 html.fit .bub{top:-4%;left:50%;right:auto;margin:0;translate:-50% 0;width:100%}
-/* ===== FIT MODE (tall): portrait phone in desktop-site mode -> mobile layout, scaled ===== */
+/* ===== FIT MODE (tall): portrait phone in desktop-site mode ===== */
 html.fitm{--u:14px;background:radial-gradient(ellipse at 15% 30%,#1f6bff 0,transparent 55%),radial-gradient(ellipse at 90% 100%,#1b5cf0 0,transparent 50%),linear-gradient(160deg,#0b45da,#06278f 70%,#041a66)}
 html.fitm body{position:fixed;left:0;top:0;transform-origin:0 0;background:none;overflow:hidden}
 html.fitm .hero{max-width:none;margin:0;padding:0 12px;gap:.7em;align-content:center;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"copy guards" "card card"}
@@ -285,7 +211,19 @@ html.fitm .copy{font-size:1em}
 html.fitm .copy h1{font-size:1.75em}
 html.fitm .guards{width:auto;justify-self:end}
 html.fitm .stage{width:min(100%,230px);height:calc(var(--u)*13);aspect-ratio:7/6;overflow:hidden}
+
+/* ===== LOGIN WELCOME VIDEO OVERLAY ===== */
+#welcomeVideoScreen{position:fixed;inset:0;z-index:9999;background:#000;display:none;align-items:center;justify-content:center}
+#welcomeVideoScreen.show{display:flex}
+#welcomeLoginVideo{width:100%;height:100%;object-fit:contain;background:#000}
+#welcomeVideoFallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;color:#fff;font-weight:900;background:rgba(0,0,0,.65);cursor:pointer}
+
 </style>
+
+<!-- Supabase JS SDK: main CDN + 2 fallbacks (unpkg, then local supabase.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>window.supabase||document.write('<script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>');</script>
+<script>window.supabase||document.write('<script src="supabase.js"><\/script>');</script>
 <script>
 (function(){var h=document.documentElement;
 function fit(){var b=document.body;if(!b)return;
@@ -377,7 +315,7 @@ addEventListener('resize',fit);addEventListener('orientationchange',fit)})();
 
 <form id="f-forgot" novalidate>
 <h2>Forgot Password?</h2>
-<p class="hint">Enter your email and we’ll pretend to send a reset link</p>
+<p class="hint">Enter your email and we’ll send you a reset link</p>
 <div class="f"><svg class="i"><use href="#mail"/></svg><input id="fg-email" type="email" autocomplete="email" placeholder="Email Address" aria-label="Email address"></div>
 <button class="btn" type="submit">Send Reset Link</button>
 <p class="msg" aria-live="polite"></p>
@@ -435,30 +373,91 @@ function fail(f,t,v){msg(f,t,'err');radio(v||t);if(f===F.in)document.dispatchEve
 function v(i){return $(i).value.trim()}
 var em=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function dobBad(d){return d<'1980-01-01'||d>'1999-12-31'}
+
+/* ===== SUPABASE CLIENT (lazy init, retries if SDK loaded late) ===== */
+var SUPABASE_URL='https://geinocdanrtpjbscfxhn.supabase.co',
+    SUPABASE_ANON_KEY='sb_publishable_uc09IiXZhBQD6TLKdHRVdg_GyT7yDN8',
+    AUTH_REDIRECT='dashboard.html',
+    LIB_ERR='Sign-in library could not load. Check your connection, turn off ad-blocker and refresh.';
+var sb=null;
+function initSb(){
+ if(sb)return sb;
+ try{if(window.supabase&&window.supabase.createClient)sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY)}
+ catch(x){console.error('Supabase init failed:',x)}
+ return sb}
+initSb();
+window.addEventListener('load',initSb);
+
 $('up-dob').addEventListener('input',function(){var d=this.value;if(d.length===10&&dobBad(d)){msg(F.up,'Sorry da! Only people born 1980 to 1999 get past the guards.','err');cuffs(d.slice(0,4))}});
-F.up.addEventListener('submit',function(e){e.preventDefault();var d=v('up-dob');
- if(!v('up-name')||!em.test(v('up-email')))return fail(F.up,'Enter your name and a valid email.','Name or email is missing at the gate. Requesting a retry.');
- if(!/^\+?[0-9 ]{7,15}$/.test(v('up-mob')))return fail(F.up,'Enter a valid mobile number.','Mobile number looks invalid. Requesting a retry.');
- if(!d)return fail(F.up,'Date of birth please. The guards need to check!','Date of birth missing. Guards need to verify the year.');
+F.up.addEventListener('submit',async function(e){e.preventDefault();var d=v('up-dob');
+ if(!v('up-name')||!em.test(v('up-email')))return fail(F.up,'Enter your name and a valid email.','Name or email is missing.');
+ if(!/^\+?[0-9 ]{7,15}$/.test(v('up-mob')))return fail(F.up,'Enter a valid mobile number.','Mobile number looks invalid.');
+ if(!d)return fail(F.up,'Date of birth please. The guards need to check!','Date of birth missing.');
  if(dobBad(d)){msg(F.up,'Sorry da! Only people born 1980 to 1999 get past the guards.','err');return cuffs(d.slice(0,4))}
  if($('up-pass').value.length<8)return fail(F.up,'Password needs at least 8 characters.','Password too short. Minimum eight characters.');
- if($('up-pass').value!==$('up-pass2').value)return fail(F.up,'Passwords don’t match.','Password mismatch detected. Please confirm again.');
- msg(F.up,'Welcome, 80’s/90’s kid! (Prototype only: no account created.)','ok');welcome()});
-F.in.addEventListener('submit',function(e){e.preventDefault();
- if(!v('in-id')||!$('in-pass').value)return fail(F.in,'Enter both fields, or the gate stays shut.','Login details incomplete. Gate stays locked.');
- if($('in-pass').value.length<6)return fail(F.in,'That password doesn’t look right.','Access denied. Password check failed. Try again.');
- msg(F.in,'Gate opens! (Prototype only: no real sign-in.)','ok');welcome()});
-F.forgot.addEventListener('submit',function(e){e.preventDefault();
- if(!em.test(v('fg-email')))return fail(F.forgot,'Enter a valid email address.','Email address invalid. Cannot send reset link.');
- msg(F.forgot,'Reset link “sent”. (Prototype only: nothing emailed.)','ok');radio('Reset link dispatched to your inbox. Prototype mode, nothing was really sent.')});
+ if($('up-pass').value!==$('up-pass2').value)return fail(F.up,'Passwords don’t match.','Password mismatch detected.');
+ if(!initSb())return fail(F.up,LIB_ERR,'Sign up library failed to load. Refresh the page.');
+ var btn=F.up.querySelector('.btn'),old=btn.innerHTML;btn.disabled=true;btn.textContent='Creating account…';
+ try{
+  var r=await sb.auth.signUp({email:v('up-email'),password:$('up-pass').value,options:{data:{full_name:v('up-name'),mobile:v('up-mob'),date_of_birth:d}}});
+  if(r.error)throw r.error;
+  msg(F.up,r.data.session?'Account created!':'Account created. Check your email to confirm it.','ok');
+  if(r.data.session)welcome();
+ }catch(err){msg(F.up,err.message||'Sign-up failed. Please try again.','err')}
+ finally{btn.disabled=false;btn.innerHTML=old}
+});
+
+/* ===== 3-SECOND LOGIN WELCOME VIDEO ===== */
+function playWelcomeVideo(){return new Promise(function(resolve){
+ var screen=document.getElementById('welcomeVideoScreen'),vid=document.getElementById('welcomeLoginVideo'),fallback=document.getElementById('welcomeVideoFallback');
+ screen.classList.add('show');vid.currentTime=0;fallback.style.display='none';
+ vid.onended=function(){location.href=AUTH_REDIRECT;resolve()};
+ vid.onerror=function(){fallback.style.display='flex'};
+ var p=vid.play();if(p&&p.catch)p.catch(function(){fallback.style.display='flex'});
+ fallback.onclick=function(){vid.play().catch(function(){})};
+})}
+
+/* ===== REAL SUPABASE SIGN-IN ===== */
+var signing=false;
+F.in.addEventListener('submit',async function(e){
+ e.preventDefault();if(signing)return;
+ var id=v('in-id'),pw=$('in-pass').value;
+ if(!id||!pw)return fail(F.in,'Enter both fields, or the gate stays shut.','Login details incomplete. Gate stays locked.');
+ if(!em.test(id))return fail(F.in,'Enter the email address you signed up with.','Email address invalid. Check and retry.');
+ if(!initSb())return fail(F.in,LIB_ERR,'Gate system offline. Sign in library failed to load. Refresh the page.');
+ var btn=F.in.querySelector('.btn'),old=btn.innerHTML;
+ signing=true;btn.disabled=true;btn.textContent='Signing in…';msg(F.in,'Checking with the guards…','ok');
+ try{
+  var r=await sb.auth.signInWithPassword({email:id,password:pw});
+  if(r.error)throw r.error;
+  msg(F.in,'Gate opens! Welcome machi…','ok');
+  await playWelcomeVideo();
+ }catch(err){
+  var m=String(err&&err.message||''),t;
+  if(/invalid login/i.test(m))t='Wrong email or password.';
+  else if(/not confirmed/i.test(m))t='Please confirm your email first.';
+  else if(/rate|too many|429/i.test(m)||(err&&err.status===429))t='Too many attempts. Wait a bit and retry.';
+  else if(/fetch|network/i.test(m))t='Network problem. Check your connection.';
+  else t=m||'Sign-in failed. Please try again.';
+  signing=false;btn.disabled=false;btn.innerHTML=old;
+  fail(F.in,t,'Access denied. '+t);
+ }
+});
+
+F.forgot.addEventListener('submit',async function(e){e.preventDefault();
+ if(!em.test(v('fg-email')))return fail(F.forgot,'Enter a valid email address.','Email address invalid.');
+ if(!initSb())return fail(F.forgot,LIB_ERR,'Sign in library failed to load. Refresh the page.');
+ try{var r=await sb.auth.resetPasswordForEmail(v('fg-email'));if(r.error)throw r.error;
+ msg(F.forgot,'Password reset email sent. Check your inbox.','ok');
+ }catch(err){msg(F.forgot,err.message||'Could not send reset email.','err')}
+});
 })();
 </script>
 <script>
 (function(){
 var DEBUG=true; /* set false to remove the preview picker in production */
 var $=function(i){return document.getElementById(i)},body=document.body,off=0,cur=null,wake=0,wx=.5,timer,last=0,
-SC={ // scene boundaries, seconds since midnight IST
- open:19800,close:75599,back:75605,rot:84600,tea:16200};
+SC={open:19800,close:75599,back:75605,rot:84600,tea:16200};
 function real(){var o={};new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'numeric',second:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(p){o[p.type]=+p.value});return o.hour*3600+o.minute*60+o.second}
 function sod(){return(real()+off+86400)%86400}
 function setClock(h){var a=h.split(':').map(Number);off=a[0]*3600+a[1]*60+(a[2]||0)-real()}
@@ -466,7 +465,6 @@ function hm(s){var h=Math.floor(s/3600)%24,m=Math.floor(s/60)%60;return(h%12||12
 function scene(s){return s>=SC.open&&s<SC.close?'open':s>=SC.close&&s<SC.back?'leave':s>=SC.back&&s<SC.rot?'patrol':s>=SC.tea&&s<SC.open?'tea':'rot'}
 var q=/[?&]t=(\d\d):(\d\d)(?::(\d\d))?/.exec(location.search);if(q)setClock(q[1]+':'+q[2]+':'+(q[3]||0));
 
-/* ---- build the night scene from the EXISTING guard artwork (cloned, not redrawn) ---- */
 var N=document.createElement('div');N.id='night';N.setAttribute('role','img');N.setAttribute('aria-label','Website closed. Security guards on night duty. Reopens at 5:30 AM IST.');
 function cl(id,nid){var c=$(id).cloneNode(true);c.id=nid;c.removeAttribute('style');c.setAttribute('class','g char pose-cross');return c}
 var A0=cl('big','nA'),K0=cl('kid','nK');
@@ -478,7 +476,6 @@ document.body.appendChild(N);
 var nA=$('nA'),nK=$('nK'),nT=$('nT'),nb=$('nb');
 nA.insertAdjacentHTML('beforeend',ex(62));nK.insertAdjacentHTML('beforeend',ex(48));
 
-/* ---- reusable clip helpers ---- */
 function P(g,o){var s=+g.dataset.s;g.style.transitionDuration=(o.ms||2200)+'ms';g.style.transform='translate('+o.x+'px,'+(495+(o.y||0))+'px) scale('+((o.d||1)*s)+','+s+')';var m=o.m||{};
  ['walking:walk','sleep:sleep','fl:fl','off:off','talking:talk','gl:gl','laugh:laugh'].forEach(function(p){p=p.split(':');g.classList.toggle(p[0],!!m[p[1]])});
  g.classList.remove('pose-cross','pose-walk','pose-talk','pose-cuff');g.classList.add(m.talk||m.gl?'pose-talk':(m.walk||m.fl)?'pose-walk':'pose-cross')}
@@ -490,7 +487,6 @@ function trans(sc){var o=cur;
  if(sc==='open'){N.classList.add('out');N.classList.remove('shut');lock(false);setTimeout(function(){N.className=''},2300);if(window.YAU)YAU.welcome();return}
  if(o==='open'){N.className='on';P(nA,{x:250,ms:0,m:{}});P(nK,{x:390,ms:0,d:-1,m:{}});N.offsetWidth;N.classList.add('shut');setTimeout(function(){lock(true)},1700)}}
 
-/* ---- scene director: picks the clip for each guard from the real IST time ---- */
 function R(){var s=sod(),sc=scene(s),t=Date.now(),W=wake>t&&(sc==='rot'||sc==='patrol');
  if($('clk'))$('clk').textContent=hm(s)+' IST';
  if(sc!==cur){trans(sc);cur=sc}
@@ -528,12 +524,10 @@ function R(){var s=sod(),sc=scene(s),t=Date.now(),W=wake>t&&(sc==='rot'||sc==='p
  $('c1').style.opacity=$('c2').style.opacity=sc==='rot'?1:0;
  say(tx,tw)}
 
-/* ---- visitor detection: only while the page is open and visible; only wakes guards ---- */
 function poke(ev){if(document.hidden||!body.classList.contains('closed')||(cur!=='rot'&&cur!=='patrol'))return;var p=ev.touches&&ev.touches[0]||ev,n=Date.now();
  if(ev.type==='pointermove'&&n-last<400)return;last=n;wx=p.clientX!=null?p.clientX/innerWidth:.5;wake=n+8000;R();setTimeout(R,8100)}
 ['pointermove','pointerdown','touchstart','click'].forEach(function(n){document.addEventListener(n,poke,{passive:true})});
 
-/* ---- real sign-in errors only (dispatched by fail() in the sign-in form) ---- */
 document.addEventListener('yau:login-error',function(){if(cur!=='open'||!window.YAU)return;var b=$('big'),k=$('kid'),Y=window.YAU;
  Y.mv(b,Y.H.b+95,500);Y.mv(k,Y.H.k+70,500);k.classList.add('off','talking','startle');setTimeout(function(){k.classList.remove('startle')},1200)});
 
@@ -544,7 +538,11 @@ if(DEBUG){var D=document.createElement('div');D.id='dbg';D.innerHTML='<b id="clk
  D.querySelector('select').onchange=function(){this.value?setClock(this.value):off=0;wake=0;R()};document.body.appendChild(D)}
 start();
 })();
-  
 </script>
+<div id="welcomeVideoScreen" aria-label="Welcome animation">
+ <video id="welcomeLoginVideo" playsinline preload="auto"><source src="welcome.mp4" type="video/mp4"></video>
+ <div id="welcomeVideoFallback">Tap to play welcome video</div>
+</div>
+
 </body>
 </html>
