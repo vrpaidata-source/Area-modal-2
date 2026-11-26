@@ -218,6 +218,9 @@ html.fitm .stage{width:min(100%,230px);height:calc(var(--u)*13);aspect-ratio:7/6
 #welcomeLoginVideo{width:100%;height:100%;object-fit:contain;background:#000}
 #welcomeVideoFallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;color:#fff;font-weight:900;background:rgba(0,0,0,.65);cursor:pointer}
 
+
+#netBanner{position:fixed;top:0;left:0;right:0;z-index:10000;background:#b42318;color:#fff;text-align:center;padding:10px;font-weight:800;display:none}#netBanner.on{display:block}
+.btn:disabled{opacity:.72;cursor:wait;filter:saturate(.7)}
 </style>
 
 <!-- Supabase JS SDK: main CDN + 2 fallbacks (unpkg, then local supabase.js) -->
@@ -237,7 +240,7 @@ fit();document.addEventListener('DOMContentLoaded',fit);
 addEventListener('resize',fit);addEventListener('orientationchange',fit)})();
 </script>
 </head>
-<body>
+<body><div id="netBanner" role="status">இணைய இணைப்பு இல்லை — connection check செய்யுங்கள்.</div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="home" viewBox="0 0 24 24"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></symbol>
 <symbol id="ppl" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M1.5 19c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6zM15 14.2c3.6-.6 7.5.9 7.5 4.8H16c0-1.8-.4-3.4-1-4.8z"/></symbol>
@@ -438,7 +441,8 @@ F.in.addEventListener('submit',async function(e){
   else if(/not confirmed/i.test(m))t='Please confirm your email first.';
   else if(/rate|too many|429/i.test(m)||(err&&err.status===429))t='Too many attempts. Wait a bit and retry.';
   else if(/fetch|network/i.test(m))t='Network problem. Check your connection.';
-  else t=m||'Sign-in failed. Please try again.';
+  else if(/fetch|network|offline/i.test(m))t='இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.';
+  else t='Login செய்ய முடியவில்லை. விவரங்களைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.';
   signing=false;btn.disabled=false;btn.innerHTML=old;
   fail(F.in,t,'Access denied. '+t);
  }
@@ -449,12 +453,13 @@ F.forgot.addEventListener('submit',async function(e){e.preventDefault();
  if(!initSb())return fail(F.forgot,LIB_ERR,'Sign in library failed to load. Refresh the page.');
  try{var r=await sb.auth.resetPasswordForEmail(v('fg-email'));if(r.error)throw r.error;
  msg(F.forgot,'Password reset email sent. Check your inbox.','ok');
- }catch(err){msg(F.forgot,err.message||'Could not send reset email.','err')}
+ }catch(err){msg(F.forgot,/fetch|network/i.test(String(err.message))?'இணைய இணைப்பைச் சரிபார்க்கவும்.':'Reset link அனுப்ப முடியவில்லை. மீண்டும் முயற்சிக்கவும்.','err')}
 });
 })();
 </script>
 <script>
 (function(){
+var nb=document.getElementById('netBanner');function net(){nb.classList.toggle('on',!navigator.onLine)}window.addEventListener('online',net);window.addEventListener('offline',net);net();
 var DEBUG=true; /* set false to remove the preview picker in production */
 var $=function(i){return document.getElementById(i)},body=document.body,off=0,cur=null,wake=0,wx=.5,timer,last=0,
 SC={open:19800,close:75599,back:75605,rot:84600,tea:16200};
