@@ -273,4 +273,19 @@ const t=setInterval(async()=>{const a=$('app');if(!window.__sb||!a||a.classList.
 const u=(await window.__sb.auth.getUser()).data.user;if(!u)return;
 const r=await window.__sb.from('user_bans').select('suspended_until,reason').eq('user_id',u.id).maybeSingle();
 if(r.data&&(!r.data.suspended_until||new Date(r.data.suspended_until)>new Date())){alert('உங்கள் account suspend / ban செய்யப்பட்டுள்ளது.\nவிதிகளை மீறியதால் இந்த நடவடிக்கை.');document.getElementById('logout').click()}},400)})();
+</script><script>
+/* ===== PHASE 4: private buckets -> short-lived signed URLs (old public URLs in the DB keep working as identifiers) ===== */
+(()=>{
+const RX=/\/storage\/v1\/object\/public\/(post-photos|profile-photos)\/([^?#]+)/,TTL=7200,cache=new Map(),SEL='img[src*="/object/public/"],video[src*="/object/public/"],audio[src*="/object/public/"]';
+const st=document.createElement('style');st.textContent='.nomedia{display:none!important}';document.head.appendChild(st);
+let timer,busy=false;
+const schedule=()=>{clearTimeout(timer);timer=setTimeout(run,40)};
+async function run(){const sb=window.__sb,a=document.getElementById('app');if(!sb||!a||a.classList.contains('hidden')||busy)return;busy=true;
+ try{const els=[...document.querySelectorAll(SEL)].filter(e=>!e.dataset.sg),need={};
+  els.forEach(e=>{const m=RX.exec(e.getAttribute('src')||'');if(!m){e.dataset.sg='x';return}const p=decodeURIComponent(m[2]);e.dataset.sg='1';e.dataset.k=m[1]+'|'+p;const c=cache.get(e.dataset.k);if(!c||c.exp<Date.now())(need[m[1]]=need[m[1]]||new Set()).add(p)});
+  for(const b in need){const r=await sb.storage.from(b).createSignedUrls([...need[b]],TTL);(r.data||[]).forEach(x=>cache.set(b+'|'+x.path,{u:x.signedUrl,err:!!x.error||!x.signedUrl,exp:Date.now()+TTL*1000-120000}))}
+  els.forEach(e=>{const c=cache.get(e.dataset.k);if(c&&!c.err)e.src=c.u;else{e.removeAttribute('src');e.classList.add('nomedia')}})}
+ catch(err){console.warn('sign',err)}finally{busy=false;if(document.querySelector(SEL.split(',').map(s=>s+':not([data-sg])').join(',')))schedule()}}
+new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','class']});
+})();
 </script></body></html>
