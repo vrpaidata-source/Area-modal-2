@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <title>Yenga Area Ulla Varatha...!!</title>
+<meta name="theme-color" content="#0B3B3C">
+<meta name="description" content="Yenga Area – the community for 80’s &amp; 90’s kids.">
+<meta property="og:title" content="Yenga Area Ulla Varatha...!!">
+<meta property="og:description" content="80’s &amp; 90’s Kids Allowed Only. Join the community.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://vrpaidata-source.github.io/-Yenga-Area-Ulla-Varatha...-80-s-90-s-Kids-/og.png">
+<meta property="og:url" content="https://vrpaidata-source.github.io/-Yenga-Area-Ulla-Varatha...-80-s-90-s-Kids-/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314787A'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23F5A524'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hind+Madurai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--y:#ffd21f;--navy:#071a4f;--glass:rgba(5,22,84,.78);--line:rgba(110,170,255,.55);--field:rgba(4,18,70,.85);--ink:#fff;--muted:#bcd0ff;--err:#ff8a80;--ok:#7ee2a0;color-scheme:dark;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -221,6 +232,45 @@ html.fitm .stage{width:min(100%,230px);height:calc(var(--u)*13);aspect-ratio:7/6
 
 #netBanner{position:fixed;top:0;left:0;right:0;z-index:10000;background:#b42318;color:#fff;text-align:center;padding:10px;font-weight:800;display:none}#netBanner.on{display:block}
 .btn:disabled{opacity:.72;cursor:wait;filter:saturate(.7)}
+
+/* ===== THEME B: TEAL + GOLD (design only) ===== */
+:root{--y:#FFC857;--navy:#0B3B3C;--glass:rgba(8,48,50,.82);--line:rgba(255,200,87,.45);--field:rgba(5,34,36,.8);--muted:#cfe6e3;--err:#ffb4a8;--ok:#8ff0c0;--disp:'Bricolage Grotesque','Hind Madurai',system-ui,sans-serif}
+html,html.fit,html.fitm{background:#0B3B3C}
+body,html.fit body,html.fitm body{font-family:'Hind Madurai',system-ui,-apple-system,'Segoe UI',sans-serif;
+background:radial-gradient(ellipse at 15% 25%,#1a8f91 0,transparent 55%),radial-gradient(ellipse at 90% 100%,#14787A 0,transparent 50%),linear-gradient(160deg,#0f5254,#0B3B3C 70%,#082b2c);background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:radial-gradient(circle,rgba(255,200,87,.35) 1.6px,transparent 2px);background-size:26px 26px;animation:kol 1.2s ease-out both}
+nav,.hero,.foot{position:relative;z-index:1}
+h1,.badge b,h2,.tabs button,.btn{font-family:var(--disp)}
+h1{font-style:normal;font-weight:800;color:var(--y);text-shadow:0 3px 0 #b87413,0 6px 14px rgba(0,0,0,.4);letter-spacing:-.02em}
+.swoosh{background:linear-gradient(90deg,#F5A524,#FFC857)}
+.badge{background:#0B3B3C;border-color:#FFC857;outline-color:#F5A524}
+.badge b{font-style:normal;font-weight:800;color:#FFC857;text-shadow:0 3px 0 #b87413}
+.badge i:after{background:#C8312B}
+nav a.on{border-color:#FFC857}
+.card{background:var(--glass);border:2px solid var(--line);box-shadow:0 0 0 1px rgba(255,200,87,.18),0 18px 40px -12px rgba(0,0,0,.55),inset 0 0 30px rgba(20,120,122,.25);animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.tabs{background:#062526}
+.tabs button[aria-selected="true"]{background:linear-gradient(#1a9395,#14787A);box-shadow:0 0 14px rgba(26,147,149,.6)}
+.f input{border-color:rgba(255,200,87,.4);border-radius:999px}
+.f input:focus{outline:3px solid #FFC857aa;outline-offset:1px;border-color:#FFC857}
+.btn{background:linear-gradient(#FFD36E,#F5A524);color:#0B3B3C;box-shadow:0 4px 0 #b87413,0 0 22px rgba(245,165,36,.4)}
+.btn:active{box-shadow:0 1px 0 #b87413}
+.btn:focus-visible,.link:focus-visible,.eye:focus-visible,.tabs button:focus-visible,nav a:focus-visible{outline:3px solid #FFC857;outline-offset:2px}
+.btn:disabled::after{content:"";width:1em;height:1em;border:3px solid rgba(11,59,60,.3);border-top-color:#0B3B3C;border-radius:50%;animation:spin .7s linear infinite}
+.link{color:#FFC857;min-height:44px;min-width:44px}
+.eye{width:44px;height:44px}
+.msg:not(:empty){display:flex;gap:.4em;align-items:center;justify-content:center;border-radius:999px;padding:.35em .9em}
+.msg.err:not(:empty){background:rgba(200,49,43,.22)}.msg.err:not(:empty)::before{content:"⚠"}
+.msg.ok:not(:empty){background:rgba(143,240,192,.16)}.msg.ok:not(:empty)::before{content:"✔"}
+.bub{background:rgba(6,37,38,.93);border-color:#FFC857;box-shadow:0 0 8px rgba(255,200,87,.5)}.bub .tag{color:#FFC857}
+.bub.chat{background:#fff;color:#0B3B3C;border-color:#fff}.bub.chat .tag{color:#14787A}
+.pw-bar{height:4px;margin:.4em 1em 0;border-radius:4px;background:rgba(255,255,255,.15);overflow:hidden}
+.pw-bar i{display:block;height:100%;width:0;background:#C8312B;transition:width .25s,background .25s}
+.pw-bar.s2 i{width:50%;background:#F5A524}.pw-bar.s3 i{width:100%;background:#8ff0c0}.pw-bar.s1 i{width:25%}
+.tick{display:flex;gap:.6em;align-items:flex-start;margin-top:.6em;font-size:.78em;line-height:1.25;cursor:pointer}.tick input{width:1.4em;height:1.4em;flex:none;accent-color:#F5A524;margin:0}.tick a,.foot a{color:#FFC857}.dob-hint{display:block;color:#FFC857;font-weight:700}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes kol{from{opacity:0;transform:scale(1.08)}to{opacity:.5;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.card,body::before{animation:none}.btn:disabled::after{animation-duration:2s}}
 </style>
 
 <!-- Supabase JS SDK: main CDN + 2 fallbacks (unpkg, then local supabase.js) -->
@@ -294,13 +344,16 @@ addEventListener('resize',fit);addEventListener('orientationchange',fit)})();
 
 <form id="f-up" class="on" novalidate>
 <h2>Create Your Account</h2>
-<p class="hint">Join Our 80’s &amp; 90’s Kids Community</p>
+<p class="hint">Join Our 80’s &amp; 90’s Kids Community<span class="dob-hint">Born 1980–1999 only</span></p>
 <div class="f"><svg class="i"><use href="#usr"/></svg><input id="up-name" type="text" autocomplete="name" placeholder="Full Name" aria-label="Full name"></div>
 <div class="f"><svg class="i"><use href="#mail"/></svg><input id="up-email" type="email" autocomplete="email" placeholder="Email Address" aria-label="Email address"></div>
 <div class="f"><svg class="i"><use href="#tel"/></svg><input id="up-mob" type="tel" inputmode="tel" autocomplete="tel" placeholder="Mobile Number" aria-label="Mobile number"></div>
 <div class="f"><svg class="i"><use href="#cal"/></svg><input id="up-dob" type="date" min="1980-01-01" max="1999-12-31" aria-label="Date of birth (1980 to 1999 only)" title="Date of birth (1980 to 1999 only)"></div>
 <div class="f"><svg class="i"><use href="#lock"/></svg><input id="up-pass" type="password" autocomplete="new-password" placeholder="Create Password" aria-label="Create password"><button type="button" class="eye" aria-label="Show password"><svg class="i"><use href="#eye"/></svg></button></div>
+<div class="pw-bar" id="pwBar" aria-hidden="true"><i></i></div>
 <div class="f"><svg class="i"><use href="#lock"/></svg><input id="up-pass2" type="password" autocomplete="new-password" placeholder="Confirm Password" aria-label="Confirm password"><button type="button" class="eye" aria-label="Show password"><svg class="i"><use href="#eye"/></svg></button></div>
+<label class="tick"><input type="checkbox" id="up-terms"><span>I am born 1980–1999, my details are true, and I accept the <a href="terms.html" target="_blank" rel="noopener">Terms</a> &amp; <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+<div id="ts-box"></div>
 <button class="btn" type="submit"><svg class="i"><use href="#add"/></svg>Sign Up</button>
 <p class="msg" aria-live="polite"></p>
 <div class="row">Already have an account? <button type="button" class="link" data-go="in">Sign In</button></div>
@@ -309,7 +362,7 @@ addEventListener('resize',fit);addEventListener('orientationchange',fit)})();
 <form id="f-in" novalidate>
 <h2>Welcome Back!</h2>
 <p class="hint">The guards are waiting at the gate</p>
-<div class="f"><svg class="i"><use href="#usr"/></svg><input id="in-id" type="text" autocomplete="username" placeholder="Email or Mobile Number" aria-label="Email or mobile number"></div>
+<div class="f"><svg class="i"><use href="#usr"/></svg><input id="in-id" type="text" autocomplete="username" placeholder="Email Address" aria-label="Email address"></div>
 <div class="f"><svg class="i"><use href="#lock"/></svg><input id="in-pass" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password"><button type="button" class="eye" aria-label="Show password"><svg class="i"><use href="#eye"/></svg></button></div>
 <button class="btn" type="submit">Sign In</button>
 <p class="msg" aria-live="polite"></p>
@@ -326,7 +379,7 @@ addEventListener('resize',fit);addEventListener('orientationchange',fit)})();
 </form>
 </section>
 </div>
-<p class="foot">Prototype preview · no real accounts are created</p>
+<p class="foot"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="terms.html#contact">Help</a></p>
 
 <script>
 (function(){
@@ -394,6 +447,10 @@ function deviceToken(){var k='yau_device_token',t=sessionStorage.getItem(k);if(!
 async function claimDeviceLock(){var r=await sb.rpc('claim_device_lock',{p_device_token:deviceToken()});if(r.error)throw r.error;if(r.data!==true)throw new Error('இந்த account ஏற்கனவே வேறு device-ல் பயன்படுத்தப்படுகிறது. முதலில் அந்த device-ல் Logout செய்யுங்கள்.')}
 
 $('up-dob').addEventListener('input',function(){var d=this.value;if(d.length===10&&dobBad(d)){msg(F.up,'Sorry da! Only people born 1980 to 1999 get past the guards.','err');cuffs(d.slice(0,4))}});
+/* Cloudflare Turnstile: paste your SITE key below. Empty = check skipped. */
+var TS_KEY='',tsToken='',tsId=null;
+if(TS_KEY){window.onTsLoad=function(){tsId=turnstile.render('#ts-box',{sitekey:TS_KEY,appearance:'interaction-only',callback:function(t){tsToken=t},'expired-callback':function(){tsToken=''},'error-callback':function(){tsToken=''}})};
+var tsS=document.createElement('script');tsS.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTsLoad';tsS.async=true;document.head.appendChild(tsS)}
 F.up.addEventListener('submit',async function(e){e.preventDefault();var d=v('up-dob');
  if(!v('up-name')||!em.test(v('up-email')))return fail(F.up,'Enter your name and a valid email.','Name or email is missing.');
  if(!/^\+?[0-9 ]{7,15}$/.test(v('up-mob')))return fail(F.up,'Enter a valid mobile number.','Mobile number looks invalid.');
@@ -401,15 +458,17 @@ F.up.addEventListener('submit',async function(e){e.preventDefault();var d=v('up-
  if(dobBad(d)){msg(F.up,'Sorry da! Only people born 1980 to 1999 get past the guards.','err');return cuffs(d.slice(0,4))}
  if($('up-pass').value.length<8)return fail(F.up,'Password needs at least 8 characters.','Password too short. Minimum eight characters.');
  if($('up-pass').value!==$('up-pass2').value)return fail(F.up,'Passwords don’t match.','Password mismatch detected.');
+ if(!$('up-terms').checked)return fail(F.up,'Please tick the Terms & Privacy box.','Please accept the terms to continue.');
+ if(TS_KEY&&!tsToken)return fail(F.up,'Please complete the quick human check.','Human check not finished.');
  if(!initSb())return fail(F.up,LIB_ERR,'Sign up library failed to load. Refresh the page.');
  var btn=F.up.querySelector('.btn'),old=btn.innerHTML;btn.disabled=true;btn.textContent='Creating account…';
  try{
-  var r=await sb.auth.signUp({email:v('up-email'),password:$('up-pass').value,options:{data:{full_name:v('up-name'),mobile:v('up-mob'),date_of_birth:d}}});
+  var r=await sb.auth.signUp({email:v('up-email'),password:$('up-pass').value,options:{captchaToken:tsToken||undefined,data:{full_name:v('up-name'),mobile:v('up-mob'),date_of_birth:d,terms_accepted_at:new Date().toISOString()}}});
   if(r.error)throw r.error;
   msg(F.up,r.data.session?'Account created!':'Account created. Check your email to confirm it.','ok');
   if(r.data.session)welcome();
  }catch(err){msg(F.up,err.message||'Sign-up failed. Please try again.','err')}
- finally{btn.disabled=false;btn.innerHTML=old}
+ finally{btn.disabled=false;btn.innerHTML=old;if(window.turnstile&&tsId!==null){try{turnstile.reset(tsId)}catch(_){}}tsToken=''}
 });
 
 /* ===== 3-SECOND LOGIN WELCOME VIDEO ===== */
@@ -454,7 +513,7 @@ F.in.addEventListener('submit',async function(e){
 F.forgot.addEventListener('submit',async function(e){e.preventDefault();
  if(!em.test(v('fg-email')))return fail(F.forgot,'Enter a valid email address.','Email address invalid.');
  if(!initSb())return fail(F.forgot,LIB_ERR,'Sign in library failed to load. Refresh the page.');
- try{var r=await sb.auth.resetPasswordForEmail(v('fg-email'));if(r.error)throw r.error;
+ try{var r=await sb.auth.resetPasswordForEmail(v('fg-email'),{redirectTo:new URL('reset-password.html',location.href).href});if(r.error)throw r.error;
  msg(F.forgot,'Password reset email sent. Check your inbox.','ok');
  }catch(err){msg(F.forgot,/fetch|network/i.test(String(err.message))?'இணைய இணைப்பைச் சரிபார்க்கவும்.':'Reset link அனுப்ப முடியவில்லை. மீண்டும் முயற்சிக்கவும்.','err')}
 });
@@ -463,7 +522,7 @@ F.forgot.addEventListener('submit',async function(e){e.preventDefault();
 <script>
 (function(){
 var nb=document.getElementById('netBanner');function net(){nb.classList.toggle('on',!navigator.onLine)}window.addEventListener('online',net);window.addEventListener('offline',net);net();
-var DEBUG=true; /* set false to remove the preview picker in production */
+var DEBUG=false;
 var $=function(i){return document.getElementById(i)},body=document.body,off=0,cur=null,wake=0,wx=.5,timer,last=0,
 SC={open:19800,close:75599,back:75605,rot:84600,tea:16200};
 function real(){var o={};new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'numeric',second:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(p){o[p.type]=+p.value});return o.hour*3600+o.minute*60+o.second}
@@ -471,7 +530,7 @@ function sod(){return(real()+off+86400)%86400}
 function setClock(h){var a=h.split(':').map(Number);off=a[0]*3600+a[1]*60+(a[2]||0)-real()}
 function hm(s){var h=Math.floor(s/3600)%24,m=Math.floor(s/60)%60;return(h%12||12)+':'+('0'+m).slice(-2)+(h<12?' AM':' PM')}
 function scene(s){return s>=SC.open&&s<SC.close?'open':s>=SC.close&&s<SC.back?'leave':s>=SC.back&&s<SC.rot?'patrol':s>=SC.tea&&s<SC.open?'tea':'rot'}
-var q=/[?&]t=(\d\d):(\d\d)(?::(\d\d))?/.exec(location.search);if(q)setClock(q[1]+':'+q[2]+':'+(q[3]||0));
+var q=/[?&]t=(\d\d):(\d\d)(?::(\d\d))?/.exec(location.search);if(DEBUG&&q)setClock(q[1]+':'+q[2]+':'+(q[3]||0));
 
 var N=document.createElement('div');N.id='night';N.setAttribute('role','img');N.setAttribute('aria-label','Website closed. Security guards on night duty. Reopens at 5:30 AM IST.');
 function cl(id,nid){var c=$(id).cloneNode(true);c.id=nid;c.removeAttribute('style');c.setAttribute('class','g char pose-cross');return c}
@@ -552,5 +611,9 @@ start();
  <div id="welcomeVideoFallback">Tap to play welcome video</div>
 </div>
 
+<script>
+(function(){var i=document.getElementById('up-pass'),b=document.getElementById('pwBar');if(!i||!b)return;
+i.addEventListener('input',function(){var v=i.value,n=0;if(v.length>=8)n++;if(/[A-Z]/.test(v)&&/[a-z]/.test(v))n++;if(/\d/.test(v)&&/[^A-Za-z0-9]/.test(v))n++;if(!v)n=0;b.className='pw-bar'+(n?' s'+n:'');});})();
+</script>
 </body>
 </html>
